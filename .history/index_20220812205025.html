@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Minified version -->
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <!-- Un-Minified version -->
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <script src="assets/js/common.js"></script>
+
+    <title>Saramaguices</title>
+</head>
+<body>
+  <header>
+    <h1>Saramaguices</h1>
+    <p>Fragmentos de obras de José Saramago</p>
+  </header>
+
+  <main class="randomQuote">
+    <blockquote>
+      <script>getRandomQuote()</script>
+      <p>"<span id="quote"></span>"</p>
+      <p><cite>- <span id="title"></span> (<span id="year"></span>)</cite></p>
+    </blockquote>
+    <button onclick="getRandomQuote()">Outra frase</button>
+  </main>
+
+  <footer>
+    <p>Em 2020 decidi voltar a ler todas as novelas de Saramago (e ainda não terminei). Vou apontando reflexões, diálogos, frases que se entendem mesmo fora do contexto do livro, tão ou mais importantes que as histórias em si, na minha opinião.</p>
+    <p>Este é um projecto pessoal sem fins lucrativos. Todos os fragmentos de livros usados são propriedade dos respectivos editores.</p>
+    <p>This website uses <a href="https://simplecss.org/">Simple.css</a></p>
+  </footer>
+</body>
+</html>
