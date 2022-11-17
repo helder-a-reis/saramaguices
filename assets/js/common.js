@@ -1,6 +1,9 @@
-
 function getRandomQuote() {
-    loadJSON().then(json => {
+    var allQuotes;
+    let path = 'assets/data/quotes.json';
+    fetch(path)
+        .then(response => response.json())
+        .then(json => {
             allQuotes = structuredClone(json);
             let randomWork = allQuotes[getRandomInt(allQuotes.length)];
             document.getElementById('title').innerHTML = randomWork.title;
@@ -8,22 +11,9 @@ function getRandomQuote() {
             let workQuotes = JSON.parse(JSON.stringify(randomWork.quotes));
             let randomQuote = workQuotes[getRandomInt(workQuotes.length)];
             document.getElementById('quote').innerHTML = randomQuote;
-    });
-}
-
-function getAllQuotes() {
-    loadJSON().then(json => {
-        
     })
-}
-
-function loadJSON() {
-    let path = 'assets/data/quotes.json';
-    fetch(path)
-        .then(response => response.json())
-        .then(json => json)
 }
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
-  }
+}
